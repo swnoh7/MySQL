@@ -95,8 +95,8 @@ public class Ex02자판기프로그램 {
 			System.out.println("잔돈 " + change + "원 입니다.");
 			
 			int numT = change / 1000;
-			int numF = (change - numT * 1000) / 500;
-			int numH = (change - numT * 1000 - numF * 500) / 100;
+			int numF = (change % 1000 / 500);
+			int numH = (change % 1000 % 500 / 100);
 			
 			System.out.println(("천원 : " + numT + "개") + (", 오백원 : " + numF + "개") + (", 백원 : " + numH + "개"));
 		}
